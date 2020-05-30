@@ -10,8 +10,8 @@ body {
 .App{
   background: #4c2a4c;
   margin: 20px auto;
-  width: 90%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 100%x;
   color: #eee;
 }
 .navbar{
