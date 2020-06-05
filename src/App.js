@@ -3,20 +3,19 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import BookContextProvider from './contexts/BookContext';
-import Navbare from './components/Navbare/Navbare';
 import BookList from './components/BookComponents/BookList';
 import BookForm from './components/BookComponents/BookForm';
+import  Header from './Layout/Header'
 
 function App() {
   return (
     <div className="App">
       <Router>
         <BookContextProvider>
-          <Navbare branding="Librery"/>
+          < Header />
           <Switch>
             <Route exact path='/' component= { BookList  } />
             <Route exact path='/add-book' component={ BookForm } />
