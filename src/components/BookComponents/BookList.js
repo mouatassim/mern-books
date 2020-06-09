@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import { BookContext } from '../../contexts/BookContext';
 import BookDetail from './BookDetail';
-import { Button, Grid, Paper } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import AddIcon from '@material-ui/icons/Add';
+import {  Grid, Paper } from '@material-ui/core';
+import AddBook from './AddBook';
 
 
 
@@ -27,19 +26,8 @@ const BookList = () => {
 
 
                 <Paper style={style.Paper}>
-                    <Link to="/add-book">
-                        <Button renderAs="button" style={style.Paper}>
-                            <span></span>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            size="large"
-                            startIcon={<AddIcon />}
-                        >
-                            New Book
-                    </Button>
-                    </Link>
+                
+                    <AddBook style={{padding: 20}}/>
                     <div className="row">
                         <div className="col-sm-12">
                             {books.map(book => {

@@ -5,7 +5,11 @@ import { bookReducer } from '../reducers/BookReducer/bookReducer';
 export const BookContext = createContext()
 
 const BookContextProvider = (props) => {
-    const [books,dispatch]= useReducer(bookReducer,[]);
+    const [books,dispatch]= useReducer(bookReducer,[{
+        id: 0,
+        title: "Life in our stars",
+        author: "Jhon Green"
+    }]);
 
 
     return (

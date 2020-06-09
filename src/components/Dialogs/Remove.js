@@ -22,8 +22,8 @@ const Remove = ({removeItem,title,desciption}) => {
 
     return (
         <Fragment>
-              <Button variant="contained" color="secondary" startIcon={<DeleteIcon />}  onClick={handleClickOpen}>
-       Delete
+              <Button variant="contained" color="secondary" onClick={handleClickOpen}>
+              <DeleteIcon />
       </Button>
             <Dialog
                 open={open}
