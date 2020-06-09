@@ -1,7 +1,7 @@
 
 import React, { useContext, Fragment, useState } from 'react'
 import { BookContext } from '../../contexts/BookContext';
-import { ADD_BOOK_TYPE } from '../../reducers/BookReducer/bookActions'
+import { EDIT_BOOK_TYPE } from '../../reducers/BookReducer/bookActions'
 import EditIcon from '@material-ui/icons/Edit';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -26,7 +26,7 @@ const EditBook = ({book}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({ type: ADD_BOOK_TYPE, book: { title, author } });
+        dispatch({ type: EDIT_BOOK_TYPE, book: { id:book.id ,title, author } });
         setOpen(false);
     }
 
@@ -35,8 +35,6 @@ const EditBook = ({book}) => {
 
             <Button
                 variant="contained"
-                color="#00838F"
-
                 onClick={handleClickOpen}>
                 <EditIcon />
             </Button>
@@ -61,7 +59,7 @@ const EditBook = ({book}) => {
                     <Button onClick={handleClose} color="primary">
                         Disagree
                         </Button>
-                    <Button variant="contained" color="#00838F" startIcon={<EditIcon />} onClick={handleSubmit}>
+                    <Button variant="contained" startIcon={<EditIcon />} onClick={handleSubmit}>
                         Edit
                         </Button>
                 </DialogActions>

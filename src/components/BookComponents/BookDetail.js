@@ -22,7 +22,7 @@ const BookDetail = ({ book }) => {
             <div className="float-right">
                 <div className="row">
                     <div className="col-sm-12">
-                        <img src='https://i.pinimg.com/originals/a4/aa/c1/a4aac1f3d86869bcfd2833e8be768014.jpg' alt="" className="img-responsive" />
+                        <img src={cover} alt="" className="img-responsive" />
                     </div>
 
                 </div>

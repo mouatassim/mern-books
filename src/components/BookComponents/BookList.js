@@ -16,7 +16,7 @@ const BookList = () => {
         }
     }
     return (
-        <Grid container sm={12}>
+        <Grid container item sm={12}>
 
             <Grid item sm={2}>
 
