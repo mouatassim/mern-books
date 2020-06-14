@@ -7,7 +7,7 @@ export const BookContext = createContext()
 const BookContextProvider = (props) => {
     const [books,dispatch]= useReducer(bookReducer,[{
         id: 0,
-        title: "Life in our stars",
+        title: "the fault in our stars",
         author: "Jhon Green"
     }]);
 

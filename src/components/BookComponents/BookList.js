@@ -11,18 +11,14 @@ const BookList = () => {
     const style = {
         Paper: {
             padding: 20,
-            margin: 30
+            margin: 10
 
         }
     }
     return (
         <Grid container item sm={12}>
 
-            <Grid item sm={2}>
-
-            </Grid>
-
-            <Grid item sm={6}>
+            <Grid item sm={12}>
 
 
                 <Paper style={style.Paper}>
